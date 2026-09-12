@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WOOP - Aptaclub AI Poop Checker | Understand Your Baby's Poop</title>
+<meta name="description" content="Upload a photo of your baby's poop and get personalised AI-powered health guidance with the Aptaclub AI Poop Checker. Quick, free and easy to use.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f7f7f9;
+    display: flex;
+    justify-content: center;
+  }
+
+  .page-wrap {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 0 40px rgba(0,0,0,0.06);
+  }
+
+  .hero-image-container {
+    position: relative;
+    width: 100%;
+    line-height: 0; /* removes inline-img gap */
+  }
+
+  .hero-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Clickable hotspot overlays, positioned as % of image so they scale responsively */
+  .cta-hotspot {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    /* Uncomment the line below while testing to see the clickable zone */
+    /* background: rgba(0,255,0,0.25); */
+    border-radius: 999px;
+  }
+
+  .cta-hotspot:focus-visible {
+    outline: 3px solid #1a237e;
+    outline-offset: 2px;
+  }
+
+  .cta-primary {
+    top: 35.76%;
+    left: 4.41%;
+    width: 47.2%;
+    height: 3.20%;
+  }
+
+  .cta-final {
+    top: 91.36%;
+    left: 7.75%;
+    width: 84.5%;
+    height: 2.76%;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap; border: 0;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    padding: 12px 10px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="page-wrap">
+    <div class="hero-image-container">
+      <img src="assets/woop-poop-checker.png" alt="WOOP World of Parenting - Understand Your Baby's Poop, Understand Their Health. Aptaclub AI Poop Checker.">
+
+      <!-- Clickable area over "TAKE THE HEALTH CHECK" button -->
+      <a href="#health-check" class="cta-hotspot cta-primary" aria-label="Take the health check">
+        <span class="sr-only">Take the health check</span>
+      </a>
+
+      <!-- Clickable area over "TAKE THE TEST & ENTER THE LUCKY DRAW" button -->
+      <a href="#health-check" class="cta-hotspot cta-final" aria-label="Take the test and enter the lucky draw">
+        <span class="sr-only">Take the test and enter the lucky draw</span>
+      </a>
+    </div>
+
+    <footer>
+      &copy; 2026 WOOP - World Of Parenting. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Point both CTAs to your actual health-check / quiz URL.
+    // Replace '#health-check' above (or the URL below) with your real destination link.
+    document.querySelectorAll('.cta-hotspot').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        if (el.getAttribute('href') === '#health-check') {
+          e.preventDefault();
+          window.location.href = 'https://your-health-check-url.com';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
