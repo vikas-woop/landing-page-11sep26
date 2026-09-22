@@ -5,25 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WOOP - Aptaclub AI Poop Checker | Understand Your Baby's Poop</title>
 <meta name="description" content="Upload a photo of your baby's poop and get personalised AI-powered health guidance with the Aptaclub AI Poop Checker. Quick, free and easy to use.">
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1404129047906813');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1404129047906813&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -107,12 +88,12 @@ src="https://www.facebook.com/tr?id=1404129047906813&ev=PageView&noscript=1"
       <img src="assets/woop-poop-checker.png" alt="WOOP World of Parenting - Understand Your Baby's Poop, Understand Their Health. Aptaclub AI Poop Checker.">
 
       <!-- Clickable area over "TAKE THE HEALTH CHECK" button -->
-      <a href="#health-check" class="cta-hotspot cta-primary" aria-label="Take the health check" data-pixel-label="Take the health Check">
+      <a href="#health-check" class="cta-hotspot cta-primary" aria-label="Take the health check">
         <span class="sr-only">Take the health check</span>
       </a>
 
       <!-- Clickable area over "TAKE THE TEST & ENTER THE LUCKY DRAW" button -->
-      <a href="#health-check" class="cta-hotspot cta-final" aria-label="Take the test and enter the lucky draw" data-pixel-label="Start the 5-minute health check">
+      <a href="#health-check" class="cta-hotspot cta-final" aria-label="Take the test and enter the lucky draw">
         <span class="sr-only">Take the test and enter the lucky draw</span>
       </a>
     </div>
@@ -127,13 +108,6 @@ src="https://www.facebook.com/tr?id=1404129047906813&ev=PageView&noscript=1"
     // Replace '#health-check' above (or the URL below) with your real destination link.
     document.querySelectorAll('.cta-hotspot').forEach(function (el) {
       el.addEventListener('click', function (e) {
-        // Fire Meta Pixel event for this CTA before navigating
-        if (typeof fbq === 'function') {
-          fbq('trackCustom', 'HealthCheckCTAClick', {
-            cta_label: el.getAttribute('data-pixel-label')
-          });
-        }
-
         if (el.getAttribute('href') === '#health-check') {
           e.preventDefault();
           window.location.href = 'https://www.danone.in/aptaclub/poop-checker/checker/?utm_source=WOOP&utm_medium=CAMPAIGN3&utm_campaign=PROMO3';
